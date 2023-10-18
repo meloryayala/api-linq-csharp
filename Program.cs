@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using music_box4.Filters;
 using music_box4.Models;
 
 using (HttpClient client = new HttpClient())
@@ -7,8 +8,7 @@ using (HttpClient client = new HttpClient())
     {
         string response = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
         var musics = JsonSerializer.Deserialize<List<Music>>(response)!;
-        musics[1998].DisplayMusicDetails();
-        Console.WriteLine(musics.Count);
+        LinqFilter.FilterAllMusicGenres(musics);
     }
     catch (Exception e)
     {
