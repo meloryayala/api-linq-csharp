@@ -6,7 +6,7 @@ public class LinqFilter
 {
     public static void FilterAllMusicGenres(List<Music> musics)
     {
-        var allMusicGenres = musics.Select(genres => genres.Genre).Distinct().ToList();
+        var allMusicGenres = musics.Select(music => music.Genre).Distinct().ToList();
         foreach (var genre in allMusicGenres)
         {
             Console.WriteLine($"- {genre}");
