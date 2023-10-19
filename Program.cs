@@ -23,19 +23,11 @@ using (HttpClient client = new HttpClient())
         // favoriteMusicsAna.AddFavoriteMusics(musics[9]);
         //
         // favoriteMusicsAna.DisplayFavoriteMusics();
-
-        var favoriteMusicsPaul = new FavoriteMusics("Paul");
-        favoriteMusicsPaul.AddFavoriteMusics(musics[800]);
-        favoriteMusicsPaul.AddFavoriteMusics(musics[801]);
-        favoriteMusicsPaul.AddFavoriteMusics(musics[802]);
-        favoriteMusicsPaul.AddFavoriteMusics(musics[804]);
-        favoriteMusicsPaul.AddFavoriteMusics(musics[805]);
         
-        favoriteMusicsPaul.DisplayFavoriteMusics();
-        favoriteMusicsPaul.GenerateJsonFile();
-        favoriteMusicsPaul.GenerateTxtFile();
-        
-
+        musics[10].DisplayMusicDetails();
+        musics[20].DisplayMusicDetails();
+        musics[30].DisplayMusicDetails();
+        musics[40].DisplayMusicDetails();
     }
     catch (Exception e)
     {
