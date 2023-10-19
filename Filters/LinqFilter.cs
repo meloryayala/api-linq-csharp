@@ -25,9 +25,19 @@ public class LinqFilter
 
     public static void FilterMusicsByArtist(List<Music> musics, string artist)
     {
-        var musicsOfArtist = musics.Where(music => music.Artist!.Equals(artist)).Select(music => music.Name).ToList();
+        var musicsOfArtist = musics.Where(music => music.Artist!.Equals(artist)).ToList();
         Console.WriteLine($"All music of artist => {artist}");
         foreach (var music in musicsOfArtist)
+        {
+            Console.WriteLine($"- {music.Name}");
+        }
+    }
+
+    public static void FilterMusicsByYear(List<Music> musics, int year)
+    {
+        var musicsByYear = musics.Where(music => music.Year! == year).OrderBy(music => music.Name).Select(music => music.Name).Distinct().ToList();
+        Console.WriteLine($"The musics of year => {year}");
+        foreach (var music in musicsByYear)
         {
             Console.WriteLine($"- {music}");
         }

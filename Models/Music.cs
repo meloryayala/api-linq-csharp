@@ -13,6 +13,10 @@ public class Music
     public int Duration { get; set; }
     [JsonPropertyName("genre")]
     public string? Genre { get; set; }
+    [JsonPropertyName("year")]
+    public string? YearString { get; set; }
+
+    public int? Year => int.Parse(YearString);
 
     public void DisplayMusicDetails()
     {

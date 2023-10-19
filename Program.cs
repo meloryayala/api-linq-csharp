@@ -12,7 +12,9 @@ using (HttpClient client = new HttpClient())
         // LinqOrder.DisplayArtistList(musics);
         // LinqFilter.FilterArtistsByGenre(musics, "pop");
         // LinqFilter.FilterArtistsByGenre(musics, "country");
-        LinqFilter.FilterMusicsByArtist(musics, "Shakira");
+        // LinqFilter.FilterMusicsByArtist(musics, "Shakira");
+        LinqFilter.FilterMusicsByYear(musics, 2000);
+        
     }
     catch (Exception e)
     {
