@@ -44,4 +44,13 @@ public class LinqFilter
         }
     }
 
+    public static void FilterCSharMusics(List<Music> musics, string note)
+    {
+        var noteMusics = musics.Where(music => music.MusicalNote!.Equals(note)).Select(music => music.Name).ToList();
+        Console.WriteLine($"The musics with musical note => {note}");
+        foreach (var music in noteMusics)
+        {
+            Console.WriteLine($"- {music}");
+        }
+    }
 }

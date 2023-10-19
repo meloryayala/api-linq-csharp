@@ -24,10 +24,11 @@ using (HttpClient client = new HttpClient())
         //
         // favoriteMusicsAna.DisplayFavoriteMusics();
         
-        musics[10].DisplayMusicDetails();
-        musics[20].DisplayMusicDetails();
-        musics[30].DisplayMusicDetails();
-        musics[40].DisplayMusicDetails();
+        // musics[10].DisplayMusicDetails();
+        
+        LinqFilter.FilterCSharMusics(musics, "C#");
+        
+        
     }
     catch (Exception e)
     {
