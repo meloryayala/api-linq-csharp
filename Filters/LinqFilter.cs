@@ -12,4 +12,15 @@ public class LinqFilter
             Console.WriteLine($"- {genre}");
         }
     }
+
+    public static void FilterArtistsByGenre(List<Music> musics, string genre)
+    {
+        var artistsByGenre = musics.Where(music => music.Genre!.Contains(genre)).Select(music => music.Artist).Distinct().ToList();
+        Console.WriteLine($"Display artists by music genre => {genre}");
+        foreach (var artist in artistsByGenre)
+        {
+            Console.WriteLine($"- {artist}");
+        }
+        
+    }
 }
