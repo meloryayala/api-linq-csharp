@@ -21,6 +21,15 @@ public class LinqFilter
         {
             Console.WriteLine($"- {artist}");
         }
-        
+    }
+
+    public static void FilterMusicsByArtist(List<Music> musics, string artist)
+    {
+        var musicsOfArtist = musics.Where(music => music.Artist!.Equals(artist)).Select(music => music.Name).ToList();
+        Console.WriteLine($"All music of artist => {artist}");
+        foreach (var music in musicsOfArtist)
+        {
+            Console.WriteLine($"- {music}");
+        }
     }
 }
