@@ -10,7 +10,7 @@ public class Music
     public string? Artist { get; set; }
     
     [JsonPropertyName("duration_ms")]
-    public int Duration { get; set; }
+    public int? Duration { get; set; }
     [JsonPropertyName("genre")]
     public string? Genre { get; set; }
     [JsonPropertyName("year")]
